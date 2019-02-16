@@ -81,6 +81,12 @@ mylog 10 "installing docker"
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 sudo usermod -aG docker pi
 
+# step 11
+mylog 11 "installing docker"
+sudo apt-get install -y xdg-utils
+wget https://raw.githubusercontent.com/mviereck/x11docker/master/x11docker -O /tmp/x11docker
+sudo bash /tmp/x11docker --update
+rm /tmp/x11docker
 
 if [[ $? == 0 ]]; then
         myfail 3 "nothing really"
