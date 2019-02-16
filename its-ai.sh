@@ -29,7 +29,7 @@ if [[ $1 == "-h" ]]; then
 fi
 
 # step 1
-mylog 1 "the start"
+mylog 1 "pre-configuring packages"
 sudo dpkg --configure -a
 
 # step 2
