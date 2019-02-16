@@ -30,7 +30,7 @@ fi
 
 # step 1
 mylog 1 "the start"
-echo foo
+sudo dpkg --configure -a
 
 # step 2
 mylog 2 "a middle"
