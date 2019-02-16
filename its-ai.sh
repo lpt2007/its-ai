@@ -88,6 +88,13 @@ wget https://raw.githubusercontent.com/mviereck/x11docker/master/x11docker -O /t
 sudo bash /tmp/x11docker --update
 rm /tmp/x11docker
 
+# step 12
+mylog 12 "installing x11docker kodi container"
+mkdir /home/pi/docker
+mkdir /home/pi/docker/kodi
+cd /home/pi/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/Dockerfile ; cd -; }
+sudo docker build -t kodi /home/pi/docker/kodi
+
 if [[ $? == 0 ]]; then
         myfail 3 "nothing really"
 fi
