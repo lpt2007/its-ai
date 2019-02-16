@@ -76,6 +76,11 @@ else
         sudo sed -i "s/gpu_mem=128/gpu_mem=256/g" /boot/config.txt
 fi
 
+# step 10
+mylog 10 "installing docker"
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+sudo usermod -aG docker pi
+
 if [[ $? == 0 ]]; then
         myfail 3 "nothing really"
 fi
