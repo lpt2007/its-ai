@@ -66,6 +66,16 @@ else
         sudo sed -i "s/start_x=0/start_x=1/g" /boot/config.txt
 fi
 
+# step 9
+mylog 9 "enabling 256 memory to gpu"
+grep "gpu_mem=256" /boot/config.txt
+if grep "gpu_mem=256" /boot/config.txt
+then
+        exit
+else
+        sudo sed -i "s/gpu_mem=128/gpu_mem=256/g" /boot/config.txt
+fi
+
 if [[ $? == 0 ]]; then
         myfail 3 "nothing really"
 fi
