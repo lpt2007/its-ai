@@ -81,6 +81,7 @@ mylog 10 "installing docker"
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 sudo usermod -aG docker pi
 
+
 if [[ $? == 0 ]]; then
         myfail 3 "nothing really"
 fi
