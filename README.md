@@ -1,5 +1,5 @@
 # its-ai
-ITS-AI is multi app docker containered system
+ITS-AI is multi app docker container system
 
 # programs included
 kodi (work in progress)
