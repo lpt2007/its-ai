@@ -56,6 +56,16 @@ sudo apt-get --purge autoremove
 mylog 7 "clean up"
 sudo apt-get autoclean
 
+# step 8
+mylog 8 "enabling rpi camera if not enabled"
+grep "start_x=1" /boot/config.txt
+if grep "start_x=1" /boot/config.txt
+then
+        exit
+else
+        sed -i "s/start_x=0/start_x=1/g" /boot/config.txt
+fi
+
 if [[ $? == 0 ]]; then
         myfail 3 "nothing really"
 fi
