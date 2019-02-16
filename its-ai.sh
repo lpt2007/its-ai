@@ -33,8 +33,8 @@ mylog 1 "pre-configuring packages"
 sudo dpkg --configure -a
 
 # step 2
-mylog 2 "a middle"
-echo bar
+mylog 2 "fix and attempt to correct a system with broken dependencies"
+sudo apt-get install -f
 
 # step 3
 mylog 3 "the end"
