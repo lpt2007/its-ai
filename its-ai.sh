@@ -1,6 +1,44 @@
 #!/bin/bash
-sudo apt update
-sudo apt -y dist-upgrade
-sudo apt -y autoremove
-sudo apt clean
-sudo apt purge -y $(dpkg -l | awk '/^rc/ { print $2 }')
+
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+NOCOLOR="\033[0m"
+
+mylog() {
+        STEP=$1
+        MSG=$2
+
+        echo -e "step $STEP: ${GREEN}${MSG}${NOCOLOR}"
+        logger "step $STEP: $MSG"
+}
+
+myfail() {
+        STEP=$1
+        MSG=$2
+
+        echo -e "step $STEP ERROR: ${RED}${MSG}${NOCOLOR}"
+        logger "step $STEP ERROR: $MSG"
+}
+
+# handle command line options
+if [[ $1 == "-h" ]]; then
+        echo "usage: $0"
+        echo " -h prints help"
+
+        exit 1
+fi
+
+# step 1
+mylog 1 "the start"
+echo foo
+
+# step 2
+mylog 2 "a middle"
+echo bar
+
+# step 3
+mylog 3 "the end"
+echo baz
+if [[ $? == 0 ]]; then
+        myfail 3 "nothing really"
+fi
