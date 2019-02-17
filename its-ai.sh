@@ -61,7 +61,10 @@ mylog 8 "enabling rpi camera if not enabled"
 grep "start_x=1" /boot/config.txt
 if grep "start_x=1" /boot/config.txt
 then
-        exit
+
+echo "Camera is already enabled. Nothing to do."
+sleep 5
+
 else
         sudo sed -i "s/start_x=0/start_x=1/g" /boot/config.txt
 fi
