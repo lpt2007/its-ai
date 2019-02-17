@@ -113,8 +113,20 @@ sudo docker build -t kodi /home/pi/docker/kodi
 
 # step 12
 mylog 12 "installing x11docker magicmirror container"
-mkdir /home/pi/docker
-mkdir /home/pi/docker/magicmirror
+if [ ! -d "/home/pi/docker" ]; 
+then
+        mkdir /home/pi/docker
+else
+        echo "docker directory already exist. nothing to do."
+        sleep 5
+fi
+if [ ! -d "/home/pi/docker/magicmirror" ]; 
+then
+        mkdir /home/pi/docker/magicmirror
+else
+        echo "magicmirror container directory already exist. nothing to do."
+        sleep 5
+fi
 cd /home/pi/docker/magicmirror && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/magicmirror/Dockerfile ; cd -; }
 cd /home/pi/docker/magicmirror && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/magicmirror/docker-entrypoint.sh ; cd -; }
 sudo docker build -t magicmirror /home/pi/docker/magicmirror
