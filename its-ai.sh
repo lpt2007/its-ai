@@ -42,11 +42,11 @@ sudo apt-get update
 
 # step 4
 mylog 4 "upgrade packages"
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 
 # step 5
 mylog 5 "distribution upgrade"
-sudo apt-get dist-upgrade
+sudo apt-get dist-upgrade -y
 
 # step 6
 mylog 6 "remove unused packages"
@@ -74,15 +74,11 @@ mylog 9 "enabling 256 memory to gpu"
 grep "gpu_mem=" /boot/config.txt
 if grep "gpu_mem=256" /boot/config.txt
 then
-
-echo "memory is already at 256Mb. Nothing to do."
-sleep 5
-
+        echo "memory is already at 256Mb. Nothing to do."
+        sleep 5
 else
-
-grep "gpu_mem=" /boot/config.txt | while read source ; do
-sudo sed -i "s/"$source"/gpu_mem=256/g" /boot/config.txt
-
+        grep "gpu_mem=" /boot/config.txt | while read source ; do
+        sudo sed -i "s/"$source"/gpu_mem=256/g" /boot/config.txt
 fi
 
 # step 10
