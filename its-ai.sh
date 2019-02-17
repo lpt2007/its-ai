@@ -72,7 +72,7 @@ mylog 9 "enabling 256 memory to gpu"
 grep "gpu_mem=" /boot/config.txt
 if grep "gpu_mem=256" /boot/config.txt
 then
-        echo "memory is already at 256Mb. Nothing to do."
+        echo "memory is already at 256Mb. nothing to do."
         sleep 5
 else
         grep "gpu_mem=" /boot/config.txt | while read source ; do
@@ -93,7 +93,20 @@ rm /tmp/x11docker
 
 # step 12
 mylog 12 "installing x11docker kodi container"
-mkdir /home/pi/docker
+if [ ! -d "/home/pi/docker" ]; 
+then
+        mkdir /home/pi/docker
+else
+        echo "docker directory already exist. nothing to do."
+        sleep 5
+fi
+if [ ! -d "/home/pi/docker/kodi" ]; 
+then
+        mkdir /home/pi/docker/kodi
+else
+        echo "kodi container directory already exist. nothing to do."
+        sleep 5
+fi
 mkdir /home/pi/docker/kodi
 cd /home/pi/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/Dockerfile ; cd -; }
 sudo docker build -t kodi /home/pi/docker/kodi
