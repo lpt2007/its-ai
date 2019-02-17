@@ -107,7 +107,6 @@ else
         echo "kodi container directory already exist. nothing to do."
         sleep 5
 fi
-mkdir /home/pi/docker/kodi
 cd /home/pi/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/Dockerfile ; cd -; }
 sudo docker build -t kodi /home/pi/docker/kodi
 
