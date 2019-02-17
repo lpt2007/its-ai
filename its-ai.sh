@@ -58,11 +58,11 @@ sudo apt-get autoclean
 
 # step 8
 mylog 8 "enabling rpi camera if not enabled"
-grep "start_x=1" /boot/config.txt
+grep "start_x=" /boot/config.txt
 if grep "start_x=1" /boot/config.txt
 then
 
-echo "Camera is already enabled. Nothing to do."
+echo "camera is already enabled. nothing to do."
 sleep 5
 
 else
@@ -71,12 +71,20 @@ fi
 
 # step 9
 mylog 9 "enabling 256 memory to gpu"
-grep "gpu_mem=256" /boot/config.txt
+grep "gpu_mem=" /boot/config.txt
 if grep "gpu_mem=256" /boot/config.txt
 then
-        exit
+
+echo "memory is already at 256Mb. Nothing to do."
+sleep 5
+
 else
-        sudo sed -i "s/gpu_mem=128/gpu_mem=256/g" /boot/config.txt
+#        sudo sed -i "s/gpu_mem=128/gpu_mem=256/g" /boot/config.txt
+        grep "gpu_mem=" /boot/config.txt | while read source ; do
+       print - "now replacing \"$source\" with \"target\""
+       sed 's/target/'"$source"'/' /boot/config.txt
+exit
+done
 fi
 
 # step 10
