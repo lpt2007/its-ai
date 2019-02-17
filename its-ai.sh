@@ -95,6 +95,14 @@ mkdir /home/pi/docker/kodi
 cd /home/pi/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/Dockerfile ; cd -; }
 sudo docker build -t kodi /home/pi/docker/kodi
 
+# step 12
+mylog 12 "installing x11docker magicmirror container"
+mkdir /home/pi/docker
+mkdir /home/pi/docker/magicmirror
+cd /home/pi/docker/magicmirror && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/magicmirror/Dockerfile ; cd -; }
+cd /home/pi/docker/magicmirror && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/magicmirror/docker-entrypoint.sh ; cd -; }
+sudo docker build -t magicmirror /home/pi/docker/magicmirror
+
 if [[ $? == 0 ]]; then
         myfail 3 "nothing really"
 fi
