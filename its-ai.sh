@@ -79,10 +79,11 @@ echo "memory is already at 256Mb. Nothing to do."
 sleep 5
 
 else
-#        sudo sed -i "s/gpu_mem=128/gpu_mem=256/g" /boot/config.txt
-        grep "gpu_mem=" /boot/config.txt | while read source ; do
-       print - "now replacing \"$source\" with \"target\""
-       sed 's/target/'"$source"'/' /boot/config.txt
+grep "gpu_mem=" /boot/config.txt | while read source ; do
+        sudo sed -i "s/"$source"/gpu_mem=256/g" /boot/config.txt
+       #grep "gpu_mem=" /boot/config.txt | while read source ; do
+       #print - "now replacing \"$source\" with \"target\""
+       #sed 's/target/'"$source"'/' /boot/config.txt
 exit
 done
 fi
