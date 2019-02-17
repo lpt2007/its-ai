@@ -77,6 +77,7 @@ then
 else
         grep "gpu_mem=" /boot/config.txt | while read source ; do
         sudo sed -i "s/"$source"/gpu_mem=256/g" /boot/config.txt
+done
 fi
 
 # step 10
