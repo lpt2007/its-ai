@@ -15,6 +15,10 @@ RUN git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git \
     && sudo chmod +x retropie_setup.sh \
     && sudo ./retropie_packages.sh setup basic_install \
     && sudo rm -rf /var/lib/apt/lists/* && sudo chown -R pi /home/retropie
+    
+RUN wget downloads.eltechs.com/install-exagear-retropie-v2.sh \
+    && sudo chmod +x install-exagear-retropie-v2.sh \
+    && sudo ./install-exagear-retropie-v2.sh \
 
 RUN sudo usermod -aG adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,inp$
 
