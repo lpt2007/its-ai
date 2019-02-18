@@ -1,5 +1,5 @@
 # its-ai
-ITS-AI is multi app manager of docker container system
+ITS-AI run apps from containers on raspberry pi
 
 # how to install its-ai
 ```
@@ -11,6 +11,6 @@ kodi (work in progress)
 
 magicmirror (work in progress)
 
-firefox (work in progress)
+chrome (work in progress)
 
-partitioner (work in progress)
+retropie (work in progress)
