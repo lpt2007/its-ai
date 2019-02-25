@@ -88,7 +88,7 @@ sudo usermod -aG docker pi
 # step 11
 mylog 10 "installing hassio"
 sudo apt-get install -y apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat software-properties-common
-curl -sL "https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install" | bash -s
+https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install | bash -s -- -m raspberrypi3
 
 # step 12
 mylog 12 "installing docker kodi container"
