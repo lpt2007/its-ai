@@ -86,14 +86,12 @@ curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 sudo usermod -aG docker pi
 
 # step 11
-mylog 11 "installing x11docker"
-sudo apt-get install -y xdg-utils
-wget https://raw.githubusercontent.com/mviereck/x11docker/master/x11docker -O /tmp/x11docker
-sudo bash /tmp/x11docker --update
-rm /tmp/x11docker
+mylog 10 "installing hassio"
+sudo apt-get install -y apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat software-properties-common
+curl -sL "https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install" | bash -s
 
 # step 12
-mylog 12 "installing x11docker kodi container"
+mylog 12 "installing docker kodi container"
 if [ ! -d "/home/pi/docker" ]; 
 then
         mkdir /home/pi/docker
@@ -112,7 +110,7 @@ cd /home/pi/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/i
 sudo docker build -t kodi /home/pi/docker/kodi
 
 # step 12
-mylog 12 "installing x11docker magicmirror container"
+mylog 12 "installing magicmirror container"
 if [ ! -d "/home/pi/docker" ]; 
 then
         mkdir /home/pi/docker
