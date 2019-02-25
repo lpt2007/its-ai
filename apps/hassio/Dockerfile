@@ -2,7 +2,7 @@ FROM raspbian/stretch
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat software-properties-common
+    && apt-get install -y apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat software-properties-common \
     && useradd -d /home/pi/hassio -G sudo -m pi \
     && echo "pi ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/pi
 
