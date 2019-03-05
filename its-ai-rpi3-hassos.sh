@@ -32,7 +32,7 @@ fi
 mylog 1 "installing docker kodi container"
 if [ ! -d "/config/docker" ]; 
 then
-        mkdir /config/pi/docker
+        mkdir /config/docker
 else
         echo "docker directory already exist. nothing to do."
         sleep 5
