@@ -116,8 +116,8 @@ fi
 cd /home/pi/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/Dockerfile ; cd -; }
 sudo docker build -t kodi /home/pi/docker/kodi
 
-# step 12
-mylog 12 "installing magicmirror container"
+# step 13
+mylog 13 "installing magicmirror container"
 if [ ! -d "/home/pi/docker" ]; 
 then
         mkdir /home/pi/docker
