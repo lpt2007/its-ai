@@ -1,1 +1,1 @@
-echo KODI!
+kodi
