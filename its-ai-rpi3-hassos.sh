@@ -51,8 +51,9 @@ else
         echo "kodi data directory already exist. nothing to do."
         sleep 5
 fi
-cd /config/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/Dockerfile ; cd -; }
-sudo docker build -t kodi /config/docker/kodi
+cd /config/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/kodi/Dockerfile ; cd -; }
+cd /config/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/kodi/config.json ; cd -; }
+cd /config/docker/kodi && { curl -O https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/kodi/run.sh ; cd -; }
 
 if [[ $? == 0 ]]; then
         myfail 3 "nothing really"
