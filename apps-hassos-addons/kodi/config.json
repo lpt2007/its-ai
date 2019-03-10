@@ -1,6 +1,6 @@
 {
   "name": "KODI",
-  "version": "0.1a",
+  "version": "0.2a",
   "slug": "kodi",
   "description": "KODI media center add-on!",
   "startup": "before",
