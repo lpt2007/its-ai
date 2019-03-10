@@ -1,0 +1,18 @@
+{
+  "name": "CHROME",
+  "version": "0.1a",
+  "slug": "chrome",
+  "description": "CHROME internet browser add-on!",
+  "startup": "before",
+  "boot": "auto",
+  "devices": [
+    "/dev/fb0:/dev/fb0:rwm",
+    "/dev/vchiq:/dev/vchiq:rwm"
+  ],
+  "map": [
+    "config:rw",
+    "ssl:rw"
+  ],
+  "options": {},
+  "schema": {}
+}
