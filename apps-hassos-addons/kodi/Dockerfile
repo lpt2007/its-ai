@@ -1,7 +1,7 @@
 FROM raspbian/stretch
 RUN apt-get update && apt-get dist-upgrade -y
 RUN apt-get install -y fbset libraspberrypi0 kodi vlc
-RUN apt-get install git
+RUN apt-get install -y git
 
 # Copy data for add-on
 COPY run.sh /
