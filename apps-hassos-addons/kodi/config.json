@@ -5,6 +5,14 @@
   "description": "KODI media center add-on!",
   "startup": "before",
   "boot": "auto",
+    "full_access": true,
+  "privileged": [
+    "NET_ADMIN",
+    "SYS_ADMIN",
+    "SYS_RAWIO",
+    "SYS_TIME",
+    "SYS_NICE"
+  ],
   "devices": [
     "/dev/fb0:/dev/fb0:rwm",
     "/dev/vchiq:/dev/vchiq:rwm"
