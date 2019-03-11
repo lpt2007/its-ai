@@ -4,7 +4,6 @@ LABEL maintainer "Alex T. <info@leal.si>"
 # Install Chromium
 RUN apt-get update && apt-get install -y \
       chromium-browser \
-      chromium-l10n \
       libraspberrypi0 \
       libraspberrypi-dev \
       libraspberrypi-doc \
