@@ -14,13 +14,9 @@ RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y \
 
 # Install X11 minimum
 RUN apt-get install -y \
-      libgtk-3-0 \
-      libx11-xcb-dev \
-      libxtst6 \
-      libxss1 \
-      libgconf-2-4 \
-      libnss3 \
-      libasound2
+      xserver-xorg \
+      xinit \
+      matchbox-window-manager
 
 # Add chromium user
 RUN groupadd -r chromium && useradd -r -g chromium -G audio,video chromium \
