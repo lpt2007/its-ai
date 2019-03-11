@@ -2,7 +2,7 @@ FROM raspbian/stretch
 LABEL maintainer "Alex T. <info@leal.si>"
 
 # Install Chromium
-RUN apt-get update && apt-get dist-upgrade && apt-get install -y \
+RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y \
       chromium-browser \
       libraspberrypi0 \
       libraspberrypi-dev \
