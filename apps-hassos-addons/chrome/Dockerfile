@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
       chromium-l10n \
       libraspberrypi0 \
       libraspberrypi-dev \
-      ibraspberrypi-doc \
+      libraspberrypi-doc \
       lsb-release \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /etc/chromium.d/ \
