@@ -12,6 +12,16 @@ RUN apt-get update && apt-get dist-upgrade && apt-get install -y \
     && mkdir -p /etc/chromium.d/ \
     && /bin/echo -e 'export GOOGLE_API_KEY="AIzaSyCkfPOPZXDKNn8hhgu3JrA62wIgC93d44k"\nexport GOOGLE_DEFAULT_CLIENT_ID="811574891467.apps.googleusercontent.com"\nexport GOOGLE_DEFAULT_CLIENT_SECRET="kdloedMFGdGla2P1zacGjAQh"' > /etc/chromium.d/googleapikeys
 
+# Install X11 minimum
+RUN apt-get install -y \
+      libgtk-3-0 \
+      libx11-xcb-dev \
+      libxtst6 \
+      libxss1 \
+      libgconf-2-4 \
+      libnss3 \
+      libasound2
+
 # Add chromium user
 RUN groupadd -r chromium && useradd -r -g chromium -G audio,video chromium \
     && mkdir -p /home/chromium/Downloads && chown -R chromium:chromium /home/chromium
