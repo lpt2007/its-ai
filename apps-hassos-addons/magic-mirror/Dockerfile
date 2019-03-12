@@ -25,5 +25,11 @@ RUN apt-get -y install libnss3
 RUN apt-get -y install libasound2
 
 EXPOSE 8080
-CMD ["npm start"]
+
+# Copy data for add-on
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
+
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
