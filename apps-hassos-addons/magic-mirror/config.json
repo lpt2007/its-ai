@@ -1,1 +1,14 @@
-
+{
+  "name": "MAGIC MIRROR",
+  "version": "0.1a",
+  "slug": "magic-mirror",
+  "description": "MAGIC MIRROR add-on!",
+  "startup": "before",
+  "boot": "auto",
+  "map": [
+    "config:rw",
+    "ssl:rw"
+  ],
+  "options": {},
+  "schema": {}
+}
