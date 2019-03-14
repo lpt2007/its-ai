@@ -2,7 +2,7 @@ FROM raspbian/stretch
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends ca-certificates git lsb-release
+    && apt-get install -y --no-install-recommends ca-certificates git lsb-release \
     && useradd -d /home/retropie -G sudo -m pi \
     && echo "pi ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/pi
 
