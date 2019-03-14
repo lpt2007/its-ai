@@ -1,3 +1,3 @@
-#ln -s /config/docker/kodi/.kodi  /root/.kodi
+ln -s /config/docker/chrome/data  /data
 
-chromium-browser
+chromium-browser --no-sandbox
