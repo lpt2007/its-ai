@@ -22,8 +22,11 @@ RUN apt-get install -y \
 RUN groupadd -r chromium && useradd -r -g chromium -G audio,video chromium \
     && mkdir -p /home/chromium/Downloads && chown -R chromium:chromium /home/chromium
     
-# Run as non privileged user
-USER chromium
+# Copy data for add-on
+COPY run.sh /
+RUN chmod a+x /run.sh
 
-ENTRYPOINT [ "/usr/bin/chromium-browser" ]
-CMD [ "--user-data-dir=/data" ]
+# Run as non privileged user
+#USER chromium
+
+CMD [ "/run.sh" ]
