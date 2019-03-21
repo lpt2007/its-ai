@@ -1,4 +1,4 @@
-# how to manual install using ssh
+# how to manual install using ssh:
 
 run this commands:
 ```
