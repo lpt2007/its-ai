@@ -15,4 +15,4 @@ click install and wait to finish.
 
 start addon
 
-enjoy :)
+enjoy :) don't forget to connect rpi hdmi to tv or monitor
