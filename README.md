@@ -22,6 +22,8 @@ curl https://raw.githubusercontent.com/lpt2007/its-ai/master/its-ai-rpi3-hassos.
 ```
 # hassos addons included
 kodi (work in progress) - working
+- how to install KODI addon
+https://github.com/lpt2007/its-ai/blob/master/apps-hassos-addons/kodi/README.md
 
 magicmirror (work in progress) - not working
 
