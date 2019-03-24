@@ -8,7 +8,7 @@ mkdir /config/docker/kodi
 cd /addons/kodi
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/kodi/Dockerfile
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/kodi/config.json
-wget https://github.com/lpt2007/its-ai/blob/master/apps-hassos-addons/kodi/run.sh
+wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/kodi/run.sh
 ```
 now go to hass.io --+ addon-store --+ local add-ons --+ KODI (click refresh if there are no KODI addon)
 
