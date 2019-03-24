@@ -42,7 +42,7 @@ sudo docker build -t magicmirror /home/pi/docker/magicmirror
 
 from ssh run this:
 ```
-docker run --rm -v /dev/snd:/dev/snd -v /dev/fb0:/dev/fb0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /usr/bin/tvservice:/usr/bin/tvservice -v /home/pi/docker/kodi/.kodi:/root/.kodi -e DISPLAY=unix$DISPLAY --privileged magicmirror
+docker run --rm -v /dev/snd:/dev/snd -v /dev/fb0:/dev/fb0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /usr/bin/tvservice:/usr/bin/tvservice -e DISPLAY=unix$DISPLAY --privileged magicmirror
 ```
 
 Enjoy. :)
