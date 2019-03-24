@@ -29,9 +29,9 @@ I create folders:
 mkdir /home/pi/docker
 mkdir /home/pi/docker/magicmirror
 ```
-transfer Dockerfile to /home/pi/docker/kodi:
+transfer Dockerfile to /home/pi/docker/magicmirror:
 ```
-cd /home/pi/docker/kodi
+cd /home/pi/docker/magicmirror
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/magicmirror/Dockerfile
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/magicmirror/docker-entrypoint.sh
 ```
