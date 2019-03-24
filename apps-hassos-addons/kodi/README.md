@@ -3,7 +3,8 @@
 run this commands:
 ```
 mkdir /addons/kodi
-mkdir /config/docker/kodi/.kodi
+mkdir /config/docker
+mkdir /config/docker/kodi
 cd /addons/kodi
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/kodi/Dockerfile
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/kodi/config.json
