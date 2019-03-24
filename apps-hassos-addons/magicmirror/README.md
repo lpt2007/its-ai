@@ -9,6 +9,7 @@ cd /addons/magicmirror
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/magicmirror/Dockerfile
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/magicmirror/config.json
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/magicmirror/run.sh
+wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps-hassos-addons/magicmirror/docker-entrypoint.sh
 ```
 now go to hass.io --+ addon-store --+ local add-ons --+ MAGIC MIRROR (click refresh if there are no KODI addon)
 
