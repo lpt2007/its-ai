@@ -37,7 +37,7 @@ wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/magicmirror/do
 ```
 build docker container:
 ```
-sudo docker build -t kodi /home/pi/docker/magicmirror
+sudo docker build -t magicmirror /home/pi/docker/magicmirror
 ```
 
 from ssh run this:
