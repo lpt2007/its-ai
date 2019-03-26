@@ -1,0 +1,8 @@
+[Unit]
+Description=Xinit Docker Service
+
+[Service]
+ExecStart=/usr/src/app/start.sh
+
+[Install]
+WantedBy=basic.target
