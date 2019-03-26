@@ -1,7 +1,6 @@
 FROM nmaas87/docker-raspbian_qemu:latest
-MAINTAINER Nico Maas <mail@nico-maas.de>
+MAINTAINER Alex T. <info@leal.si>
 ENV DEBIAN_FRONTEND noninteractive
-#RUN [ "cross-build-start" ]
 
 # Install basic system with gui
 RUN apt-get update \
@@ -50,6 +49,7 @@ RUN useradd \
   pi \
   && sed -i '/%sudo[[:space:]]/ s/ALL[[:space:]]*$/NOPASSWD:ALL/' /etc/sudoers
 
+# install kodi and requirements
 RUN apt-get update \
     && apt-get install -y \
         kodi \
@@ -63,6 +63,7 @@ RUN chmod +x /usr/local/bin/fbcp && chmod +x /usr/local/bin/raspi2fb
 RUN mkdir -p /usr/src/app && ln -s /usr/src/app /app
 WORKDIR /usr/src/app
 COPY src /usr/src/app
+RUN chmod +x /usr/src/app/ *
 
 # copy service file, enable own service, disable resin launch service
 COPY src/xinit-docker.service /lib/systemd/system/xinit-docker.service
