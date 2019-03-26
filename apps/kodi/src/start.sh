@@ -4,4 +4,4 @@
 export HOME=/home/pi/
 
 #start application
-./usr/ src/app/launch_app.sh
+./src/app/launch_app.sh
