@@ -32,7 +32,7 @@ wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/xin
 cd ..
 cd tools
 wget https://github.com/lpt2007/its-ai/raw/master/apps/chrome/tools/fbcp
-wget https://github.com/lpt2007/its-ai/raw/master/apps/kodi/chrome/raspi2fb
+wget https://github.com/lpt2007/its-ai/raw/master/apps/chrome/tools/raspi2fb
 cd ..
 ```
 build docker container:
