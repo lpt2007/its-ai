@@ -3,6 +3,7 @@
   "version": "0.3",
   "slug": "kodi",
   "description": "KODI media center add-on!",
+  "arch": ["armhf", "armv7"],
   "startup": "before",
   "boot": "auto",
   "devices": [
