@@ -28,7 +28,7 @@ wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/Dockerf
 cd src
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/launch_app.sh
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/start.sh
-wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/bash-docker.service
+wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/xinit-docker.service
 cd ..
 cd tools
 wget https://github.com/lpt2007/its-ai/raw/master/apps/chrome/tools/fbcp
