@@ -14,34 +14,36 @@ install docker if already not installed with command:
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 sudo usermod -aG docker pi
 ```
-run raspi-config:
-```
-sudo raspi-config
-```
-go to -> "Interfacing Options" -> "Camera" -> Enable,
-
-go to -> "Advanced Options" -> "Memory Split" -> 256
-
-go to -> "Finish" -> "Reboot"
-
 I create folders:
 ```
 mkdir /home/pi/docker
 mkdir /home/pi/docker/chrome
+mkdir /home/pi/docker/chrome/src
+mkdir /home/pi/docker/chrome/tools
 ```
 transfer Dockerfile to /home/pi/docker/chrome:
 ```
-cd /home/pi/docker/chrome
+cd /home/pi/docker/kodi
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/Dockerfile
+cd src
+wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/launch_app.sh
+wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/start.sh
+wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/bash-docker.service
+cd ..
+cd tools
+wget https://github.com/lpt2007/its-ai/raw/master/apps/chrome/tools/fbcp
+wget https://github.com/lpt2007/its-ai/raw/master/apps/kodi/chrome/raspi2fb
+cd ..
 ```
 build docker container:
 ```
-sudo docker build -t chrome /home/pi/docker/chrome
+sudo docker build -t chrome .
 ```
 
 from ssh run this:
 ```
-docker run --rm -v /dev/snd:/dev/snd -v /dev/fb0:/dev/fb0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /usr/bin/tvservice:/usr/bin/tvservice -e DISPLAY=unix$DISPLAY --privileged chrome
+docker run --rm --name=its-ia_app_chrome --privileged chrome
+
 ```
 
 Enjoy. :)
