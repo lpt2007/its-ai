@@ -38,7 +38,7 @@ wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/Dockerfil
 cd src
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/src/launch_app.sh
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/src/start.sh
-wget https://raw.githubusercontent.com/lpt2007/its-ai/blob/master/apps/kodi/src/bash-docker.service
+wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/kodi/src/bash-docker.service
 cd ..
 cd tools
 wget https://github.com/lpt2007/its-ai/raw/master/apps/kodi/tools/fbcp
