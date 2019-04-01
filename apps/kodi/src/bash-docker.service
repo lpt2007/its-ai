@@ -1,5 +1,5 @@
 [Unit]
-Description=Docker Service
+Description=Bash Docker Service
 
 [Service]
 ExecStart=/usr/src/app/start.sh
