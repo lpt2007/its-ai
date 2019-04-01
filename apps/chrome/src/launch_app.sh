@@ -17,4 +17,4 @@ sudo matchbox-window-manager -use_cursor yes -use_titlebar no &
 #sudo matchbox-window-manager -use_cursor no -use_titlebar no &
 
 # Start Payload App
-xterm
+chromium-browser
