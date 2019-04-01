@@ -68,8 +68,8 @@ COPY src /usr/src/app
 RUN chmod +x /usr/src/app/ *
 
 # copy service file, enable own service, disable resin launch service
-COPY src/bash-docker.service /lib/systemd/system/bash-docker.service
-RUN systemctl enable bash-docker.service
+COPY src/xinit-docker.service /lib/systemd/system/xinit-docker.service
+RUN systemctl enable xinit-docker.service
 RUN systemctl disable launch.service
 
 # start init system
