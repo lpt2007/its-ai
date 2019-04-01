@@ -23,7 +23,7 @@ mkdir /home/pi/docker/chrome/tools
 ```
 transfer Dockerfile to /home/pi/docker/chrome:
 ```
-cd /home/pi/docker/kodi
+cd /home/pi/docker/chrome
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/Dockerfile
 cd src
 wget https://raw.githubusercontent.com/lpt2007/its-ai/master/apps/chrome/src/launch_app.sh
