@@ -33,11 +33,11 @@ RUN apt-get update \
 
 # Generate Locales
 RUN touch /usr/share/locale/locale.alias \
-  && sed -i "s/^#\ \+\(de_DE.UTF-8\)/\1/" /etc/locale.gen \
-  && locale-gen de_DE de_DE.UTF-8
-ENV LANG de_DE.UTF-8 \
-  LC_ALL de_DE.UTF-8 \
-  LANGUAGE de_DE:de
+  && sed -i "s/^#\ \+\(sl_SI.UTF-8\)/\1/" /etc/locale.gen \
+  && locale-gen sl_SI sl_SI.UTF-8
+ENV LANG sl_SI.UTF-8 \
+  LC_ALL sl_SI.UTF-8 \
+  LANGUAGE sl_SI:sl
 
 # Add User pi
 RUN useradd \
@@ -66,8 +66,8 @@ COPY src /usr/src/app
 RUN chmod +x /usr/src/app/ *
 
 # copy service file, enable own service, disable resin launch service
-COPY src/xinit-docker.service /lib/systemd/system/xinit-docker.service
-RUN systemctl enable xinit-docker.service
+COPY src/bash-docker.service /lib/systemd/system/bash-docker.service
+RUN systemctl enable bash-docker.service
 RUN systemctl disable launch.service
 
 # start init system
