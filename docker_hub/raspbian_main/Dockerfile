@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:stretch
+FROM balenalib/rpi-raspbian:latest
 
 ENV QEMU_EXECVE 1
 
