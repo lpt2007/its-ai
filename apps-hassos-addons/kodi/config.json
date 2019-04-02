@@ -10,6 +10,7 @@
     "/dev/fb0:/dev/fb0:rwm",
     "/dev/vchiq:/dev/vchiq:rwm"
   ],
+  "full_access":{},
   "map": [
     "config:rw",
     "ssl:rw"
