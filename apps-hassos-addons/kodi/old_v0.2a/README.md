@@ -16,4 +16,7 @@ click install and wait to finish. If there is not KODI inder locall add-ons clic
 
 start addon
 
+When kodi starts:
+go to -> "system" -> "player settings - Expert" -> check "Allow hardware acceleration - OMXPlayer"
+
 enjoy :) don't forget to connect rpi hdmi to tv or monitor
