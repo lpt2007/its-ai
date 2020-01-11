@@ -1,6 +1,6 @@
 {
   "name": "KODI-GUI",
-  "version": "0.25.01a",
+  "version": "0.25.04a",
   "slug": "kodi",
   "description": "KODI 17.4 media center add-on!",
   "arch": ["armhf", "armv7"],
