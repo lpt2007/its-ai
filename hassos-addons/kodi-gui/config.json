@@ -1,0 +1,19 @@
+{
+  "name": "KODI-GUI",
+  "version": "0.25.01a",
+  "slug": "kodi",
+  "description": "KODI 17.4 media center add-on!",
+  "arch": ["armhf", "armv7"],
+  "startup": "before",
+  "boot": "auto",
+  "devices": [
+    "/dev/fb0:/dev/fb0:rwm",
+    "/dev/vchiq:/dev/vchiq:rwm",
+    "/dev/input:/dev/input:rwm"
+  ],
+  "privileged": ["SYS_ADMIN","DAC_READ_SEARCH"],
+  "full_access": "true",
+  "map": ["share:rw"],
+  "options": {},
+  "schema": {}
+}
