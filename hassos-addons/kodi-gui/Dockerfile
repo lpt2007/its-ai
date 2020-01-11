@@ -19,6 +19,14 @@ RUN apt-get update && apt-get install -y kodi-pvr-mythtv kodi-pvr-vuplus kodi-pv
  kodi-pvr-dvbviewer kodi-pvr-argustv kodi-pvr-iptvsimple \
  && apt-get clean && rm -rf /var/lib/apt/lists/*
  
+# Enable tvservice
+RUN apt-get update && apt-get install git build-essential cmake -y
+
+RUN cd /tmp && git clone http://github.com/raspberrypi/userland && sed -i 's/set(INSTALL_TARGETS "${INSTALL_TARGETS} vcilcs")/set(INSTALL_TARGETS ${INSTALL_TARGETS} vcilcs)/g' /tmp/userland/interface/vmcs_host/CMakeLists.txt && cd userland && ./buildme
+
+RUN ln -s /opt/vc/bin/tvservice /usr/bin/tvservice
+
+ 
 # Configure Kodi group
 RUN usermod -a -G audio root && \
 usermod -a -G video root && \
