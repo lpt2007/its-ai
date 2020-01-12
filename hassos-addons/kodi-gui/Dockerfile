@@ -1,7 +1,7 @@
 FROM resin/rpi-raspbian:jessie
 
 # Enable building ARM container on x86 machinery on the web (comment out next line if built on Raspberry)
-#RUN [ "cross-build-start" ]
+RUN [ "cross-build-start" ]
 
 RUN apt-get clean && apt-get update && apt-get install wget -y
 
@@ -62,4 +62,4 @@ CMD [ "/run.sh" ]
 #CMD ["bash", "/usr/bin/kodi"]
 
 # stop processing ARM emulation (comment out next line if built on Raspberry)
-#RUN [ "cross-build-end" ]
+RUN [ "cross-build-end" ]
